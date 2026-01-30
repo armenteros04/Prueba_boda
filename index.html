@@ -2,7 +2,7 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>♡ Laura & Miguel ♡</title>
+    <title>♡ Marta & Jorge ♡</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lato:wght@300;400&display=swap" rel="stylesheet">
 
@@ -438,9 +438,7 @@
 <body>
 
 <header>
-    <h1>Laura & Miguel</h1>
-    <p>Nos casamos · 14 de Septiembre de 2026</p>
-    
+    <h1>Marta & Jorge</h1>    
     <div class="countdown">
         <div class="countdown-item">
             <span class="countdown-number" id="days">0</span>
@@ -454,70 +452,80 @@
             <span class="countdown-number" id="minutes">0</span>
             <span class="countdown-label">Minutos</span>
         </div>
+        <div class="countdown-item">
+    <span class="countdown-number" id="seconds">0</span>
+    <span class="countdown-label">Segundos</span>
+</div>
+
     </div>
 </header>
 
 <section>
-    <h2><span class="icon">💕</span> Nuestra Historia</h2>
+    <h2><span class="icon">💕</span> ¡Nos casamos!</h2>
     <div class="story">
-        <p>Todo comenzó cuando nuestros caminos se cruzaron en un momento perfecto. Desde ese día, cada momento juntos ha sido una aventura llena de amor, risas y complicidad.</p>
-        <p>Ahora, queremos celebrar nuestro amor rodeados de las personas más especiales de nuestras vidas. ¡Vosotros!</p>
+        <p>Y si estás viendo esto es porque queremos que nos acompañes en este día tan especial.    La ceremonia religiosa tendrá lugar el día 20 de Junio de 2026 a las 12:30h en la Iglesia de San Martín de Segovia, posteriormente lo celebraremos como se merece en la finca Casa del Esquileo en Cabanillas del Monte.
+</p>
     </div>
 </section>
 
 <section>
     <h2><span class="icon">💒</span> El Gran Día</h2>
     <div class="info">
-        <strong>14 de Septiembre de 2026</strong><br>
-        Ceremonia a las 18:00<br>
-        <strong>Hacienda Los Olivos</strong><br>
-        Sevilla
+        <strong>20 de Junio de 2026</strong><br>
+        Ceremonia a las 12:30h en la Iglesia de San Martín (Segovia)<br>
+        Celebración en la finca Casa del Esquileo (Cabanillas del Monte)<br>
     </div>
     
-    <div class="map-container">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d201095.88974786244!2d-6.134474449999999!3d37.3890924!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd126c1114be6291%3A0x34f018621cfe5648!2sSevilla!5e0!3m2!1ses!2ses!4v1234567890" allowfullscreen="" loading="lazy"></iframe>
-    </div>
+<div class="map-container">
+    <iframe 
+        src="https://www.google.com/maps?q=Iglesia%20de%20San%20Martín%20Segovia&output=embed"
+        loading="lazy"
+        allowfullscreen>
+    </iframe>
+</div>
+
+<div class="map-container">
+    <iframe 
+        src="https://www.google.com/maps?q=Casa%20del%20Esquileo%20Cabanillas%20del%20Monte&output=embed"
+        loading="lazy"
+        allowfullscreen>
+    </iframe>
+</div>
+
 </section>
 
 <section>
-    <h2><span class="icon">⏰</span> Programa del Día</h2>
-    <div class="timeline">
-        <div class="timeline-item">
-            <div class="timeline-time">18:00</div>
-            <div class="timeline-event">
-                <strong>Ceremonia</strong><br>
-                Nos damos el sí quiero
-            </div>
-        </div>
-        <div class="timeline-item">
-            <div class="timeline-time">19:30</div>
-            <div class="timeline-event">
-                <strong>Cóctel</strong><br>
-                Aperitivos y celebración
-            </div>
-        </div>
-        <div class="timeline-item">
-            <div class="timeline-time">21:30</div>
-            <div class="timeline-event">
-                <strong>Banquete</strong><br>
-                Cena y brindis
-            </div>
-        </div>
-        <div class="timeline-item">
-            <div class="timeline-time">00:00</div>
-            <div class="timeline-event">
-                <strong>Fiesta</strong><br>
-                ¡A bailar hasta el amanecer!
-            </div>
-        </div>
+    <h2><span class="icon">🥂</span> Confirmación Preboda</h2>
+
+    <div class="info" style="margin-bottom: 20px;">
+       Estamos planteando organizar una pequeña celebración previa al evento ¿Te apuntarías?
     </div>
+
+    <form id="prebodaForm" action="javascript:void(0);">
+
+        <input type="text" name="nombre_preboda" placeholder="Nombre y apellidos" required>
+
+        <select name="asistencia_preboda" required>
+            <option value="">¿Asistirás a la preboda?</option>
+            <option value="Sí">Sí, asistiré</option>
+            <option value="No">No podré asistir</option>
+        </select>
+
+        <button type="submit">Enviar confirmación a la preboda</button>
+
+    </form>
+
+    <p id="mensajePreboda" style="display:none; text-align:center; color:green; margin-top:15px;">
+        ¡Confirmación de preboda enviada!
+    </p>
 </section>
+
 
 
 <section>
     <h2><span class="icon">✉️</span> Confirmación de Asistencia</h2>
     <div class="info" style="margin-bottom: 20px;">
-        Por favor, confirmad vuestra asistencia antes del <strong>15 de Agosto de 2026</strong>
+        Por favor, confirmad vuestra asistencia antes del <strong>1 de mayo de 2026</strong>
     </div>
 
     <form id="rsvpForm" action="javascript:void(0);">
@@ -533,7 +541,7 @@
 
         <textarea name="comentarios" placeholder="Alergias, intolerancias o comentarios"></textarea>
 
-        <button type="submit">Enviar confirmación</button>
+        <button type="submit">Enviar confirmación a la boda</button>
     </form>
 
     <p id="mensaje" style="display:none; text-align:center; color:green; margin-top:15px;">
@@ -545,42 +553,46 @@
     <h2><span class="icon">🎁</span> Lista de Bodas</h2>
     <div class="gift-info">
         <p>Vuestra presencia es nuestro mejor regalo</p>
-        <p>Si queréis tener un detalle con nosotros, agradeceríamos una aportación para nuestra luna de miel</p>
-        <p><strong>ES00 0000 0000 0000 0000 0000</strong></p>
+        <p>Si queréis ayudarnos con el inicio de esta nueva etapa.</p>
+        <p><strong>ES15 1465 0100 9320 6121 7167</strong></p>
         <p style="font-size: 0.9rem; color: #666; margin-top: 15px;"><em>También aceptamos sobres el día de la boda</em></p>
     </div>
 </section>
 
-<footer>
+<footer>    
     ¡No podemos esperar para celebrarlo con vosotros!<br>
     Con todo nuestro amor,<br>
-    <strong>Laura y Miguel</strong>
+    <strong>Marta y jorge</strong>
 </footer>
 
 <script>
 // Countdown
 function updateCountdown() {
-    const weddingDate = new Date('2026-09-14T18:00:00').getTime();
+    const weddingDate = new Date('2026-06-20T12:30:00').getTime();
     const now = new Date().getTime();
     const distance = weddingDate - now;
 
     const days = Math.floor(distance / (1000 * 60 * 60 * 24));
     const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
     const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    const seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
     document.getElementById('days').textContent = days;
     document.getElementById('hours').textContent = hours;
     document.getElementById('minutes').textContent = minutes;
+    document.getElementById('seconds').textContent = seconds;
 
     if (distance < 0) {
         document.getElementById('days').textContent = '0';
         document.getElementById('hours').textContent = '0';
         document.getElementById('minutes').textContent = '0';
+        document.getElementById('seconds').textContent = '0';
     }
 }
 
+
 updateCountdown();
-setInterval(updateCountdown, 60000);
+setInterval(updateCountdown, 1000);
 
 // Form submission (unchanged)
 document.addEventListener("DOMContentLoaded", function () {
@@ -607,6 +619,33 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
 });
+
+// FORMULARIO PREBODA
+document.addEventListener("DOMContentLoaded", function () {
+
+    const scriptURLPreboda = 'https://script.google.com/macros/s/AKfycbzgzZoWXjLSO52aG6pgMv6BxXpBBdF2lBjRjokkljX7LigVC2IIIMhZR6dOCOG4UPoh/exec';
+    const prebodaForm = document.getElementById('prebodaForm');
+    const mensajePreboda = document.getElementById('mensajePreboda');
+
+    prebodaForm.addEventListener('submit', function (e) {
+        e.preventDefault();
+
+        fetch(scriptURLPreboda, {
+            method: 'POST',
+            body: new FormData(prebodaForm)
+        })
+        .then(() => {
+            mensajePreboda.style.display = 'block';
+            prebodaForm.reset();
+        })
+        .catch(err => {
+            alert('Error al enviar la confirmación de preboda');
+            console.error(err);
+        });
+    });
+
+});
+
 </script>
 
 </body>
