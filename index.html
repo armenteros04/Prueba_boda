@@ -529,6 +529,38 @@
     </p>
 </section>
 
+
+<section>
+    <h2><span class="icon">🚌</span> Servicio de autobuses</h2>
+
+    <div class="info">
+        Habrá disponibilidad de <strong>autobuses de ida y vuelta desde Segovia hasta la finca</strong>.<br><br>
+        El lugar exacto de recogida está todavía <strong>pendiente de confirmación</strong>.<br><br>
+        Para poder hacer una estimación, ¿podrías indicarnos si utilizarías el autobús?
+    </div>
+
+    <form id="busForm" action="javascript:void(0);">
+
+        <input type="text" name="nombre" placeholder="Nombre y apellidos" required>
+
+        <select name="bus" required>
+            <option value="">¿Utilizarías el autobús?</option>
+            <option value="Sí">Sí, lo utilizaría</option>
+            <option value="No">No lo utilizaría</option>
+            <option value="Tal vez">Tal vez / No estoy seguro</option>
+        </select>
+
+        <button type="submit">Confirmar servicio de bus</button>
+
+    </form>
+
+    <p id="mensajeBus" style="display:none; text-align:center; color:green; margin-top:15px;">
+        ¡Gracias por tu respuesta!
+    </p>
+
+</section>
+
+
 <section>
     <h2><span class="icon">🎁</span> Lista de Bodas</h2>
     <div class="gift-info">
@@ -599,6 +631,37 @@ document.addEventListener("DOMContentLoaded", function () {
 
 });
 
+
+// FORMULARIO AUTOBÚS
+document.addEventListener("DOMContentLoaded", function () {
+
+    const scriptURLBus = 'https://script.google.com/macros/s/AKfycbwA4VKngNQIoMeZjLdJyrfzybkjMYZ4PmQ_6y8onE09ino3oax6fXcNFSUtael7VT9L/exec';
+    const busForm = document.getElementById('busForm');
+    const mensajeBus = document.getElementById('mensajeBus');
+
+    busForm.addEventListener('submit', function (e) {
+        e.preventDefault();
+
+        fetch(scriptURLBus, {
+            method: 'POST',
+            body: new FormData(busForm)
+        })
+        .then(() => {
+            mensajeBus.style.display = 'block';
+            busForm.reset();
+        })
+        .catch(err => {
+            alert('Error al enviar la respuesta');
+            console.error(err);
+        });
+    });
+
+});
+
+
+
+
+
 // FORMULARIO PREBODA
 document.addEventListener("DOMContentLoaded", function () {
 
@@ -629,7 +692,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
 </body>
 </html>
-
 
 
 
